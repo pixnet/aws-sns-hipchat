@@ -72,7 +72,7 @@ func (h HipChatSender) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-  fmt.Println("Starting aws-sns-hipchat server.")
+  fmt.Println("Starting pixnet-aws-sns-hipchat server.")
 
   h := HipChatSender{AuthToken: os.Getenv("HIPCHAT_AUTH_TOKEN")}
   http.ListenAndServe(":"+os.Getenv("PORT"), h)

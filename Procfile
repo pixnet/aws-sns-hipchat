@@ -1,1 +1,1 @@
-web: aws-sns-hipchat
+web: pixnet-aws-sns-hipchat
