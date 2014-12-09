@@ -63,7 +63,7 @@ func (h HipChatSender) ServeHTTP(w http.ResponseWriter, r *http.Request) {
   }
 
   if len(n.Message) != 0 && len(n.Subject) != 0 {
-    err := h.SendMessage(room_id, fmt.Sprintf("%v: %v", n.Subject, n.Message))
+    err := h.SendMessage(room_id, fmt.Sprintf("%v", n.Subject))
     if err != nil {
       fmt.Printf("HipChat error: %v\n", err)
       http.Error(w, err.Error(), http.StatusInternalServerError)
